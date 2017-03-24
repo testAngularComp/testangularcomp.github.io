@@ -274,7 +274,7 @@ var purchaseApp = angular.module("purchaseApp", []).filter('startFrom', function
     $scope.sortReverse  = false; 
 
     $scope.currentPage = 0;
-    $scope.itemsPerPage = 50;
+    $scope.itemsPerPage = 6;
     $scope.searchTest   = ''
 
         $scope.firstPage = function() {
@@ -310,6 +310,39 @@ var purchaseApp = angular.module("purchaseApp", []).filter('startFrom', function
             }
             
         }
+
+
+        $scope.addTable = function () {
+
+            $("#purch_table").clone()
+                .addClass("newElement")         
+                .appendTo("#x");
+
+            // function clone(obj) {
+            //     if(tableData == null || typeof(tableData) != 'object')
+            //     {
+            //         return tableData;
+            //     }
+            //     var tableData2 = {};
+            //     for(var key in tableData)
+            //     {
+            //         tableData2[key] = clone(tableData[key]);
+            //     }
+            //     return tableData2;
+            // } 
+
+        }
+
+
+
+
+
+
+
+
+
+
+
 
     });
 
